@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>連書賢 Jasper Lien｜電影製片人・節目製作人・導演</title>
+<meta name="description" content="連書賢，近三十年影視製作資歷。作品橫跨院線電影、偶像劇、戲劇單元劇、棚內綜藝、外景行腳、品牌廣告與公益短片。2025 年院線電影《突破：三千米的泳氣》聯合製片人。">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="連書賢 Jasper Lien｜電影製片人・節目製作人・導演">
+<meta property="og:description" content="近三十年影視製作資歷。作品橫跨院線電影、偶像劇、綜藝節目、品牌廣告與公益短片。">
+<meta property="og:locale" content="zh_TW">
+<meta name="theme-color" content="#16110C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=IBM+Plex+Mono:wght@300;400;500&family=Noto+Sans+TC:wght@200;300;400;500;700;900&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  color-scheme:dark;
+  --ink:#16110C;        /* 展廳牆面 · 最深 */
+  --wall:#1E1811;       /* 抬起的面板 */
+  --frame:#3B2E1F;      /* 細框 */
+  --gold:#C9A961;       /* 主色 · 取自 TRYLINE logo 金 */
+  --gold-lo:#7E6838;    /* 暗金 · 分隔線 */
+  --paper:#F0E9DC;      /* 主文字 */
+  --muted:#9C8E7A;      /* 次文字 */
+
+  --serif:"Noto Serif TC",serif;
+  --sans:"Noto Sans TC",sans-serif;
+  --didone:"Bodoni Moda",serif;
+  --mono:"IBM Plex Mono",monospace;
+
+  --gut:clamp(20px,5vw,80px);
+  --room:clamp(96px,14vh,180px);   /* 展間間距 */
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{
+  scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+  background:var(--ink);              /* 過捲區域不露白 */
+  color-scheme:dark;                  /* 瀏覽器 UI 跟著深色 */
+  overscroll-behavior:none;
+}
+body{
+  margin:0;background:var(--ink);color:var(--paper);
+  overscroll-behavior:none;
+  font-family:var(--sans);font-weight:300;line-height:1.9;
+  letter-spacing:.02em;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--gut)}
+.narrow{max-width:660px}
+
+/* ============ HERO ============ */
+.hero{
+  min-height:100svh;display:flex;align-items:center;
+  position:relative;overflow:hidden;isolation:isolate;
+  padding-block:15vh 13vh;
+}
+
+/* 作品牆 · 三排流動劇照 */
+.reel{
+  position:absolute;inset:-4% -2%;z-index:0;filter:saturate(1.18) brightness(1.08) contrast(1.04);
+  display:grid;grid-template-rows:repeat(3,1fr);gap:clamp(6px,.7vw,11px);
+}
+.strip{overflow:hidden;position:relative}
+.run{
+  display:flex;gap:clamp(6px,.7vw,11px);height:100%;
+  position:absolute;top:0;left:0;will-change:transform;
+}
+.run img{height:100%;width:auto;max-width:none;flex:0 0 auto;object-fit:cover;border-radius:2px}
+.st1 .run{animation:drift 78s linear infinite}
+.st2 .run{animation:drift 96s linear infinite reverse}
+.st3 .run{animation:drift 66s linear infinite}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* 遮罩：左濃右淡，讓文字壓得住 */
+.veil{
+  position:absolute;inset:0;z-index:1;
+  background:
+    linear-gradient(97deg,var(--ink) 1%,rgba(22,17,12,.93) 25%,rgba(22,17,12,.52) 54%,rgba(22,17,12,.44) 78%,rgba(22,17,12,.60) 100%),
+    linear-gradient(to bottom,rgba(22,17,12,.72) 0%,rgba(22,17,12,.06) 24%,rgba(22,17,12,.12) 66%,var(--ink) 100%);
+}
+/* 金色光暈 */
+.glow{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:
+    radial-gradient(52% 48% at 79% 15%,rgba(212,178,102,.34),transparent 66%),
+    radial-gradient(30% 34% at 88% 8%,rgba(240,210,150,.20),transparent 62%),
+    radial-gradient(44% 50% at 4% 94%,rgba(176,122,54,.20),transparent 72%);
+}
+/* 膠卷顆粒 */
+.grain{
+  position:absolute;inset:0;z-index:3;pointer-events:none;
+  opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+}
+
+.hero-inner{
+  position:relative;z-index:4;width:100%;
+  max-width:1180px;margin:0 auto;padding-inline:var(--gut);
+}
+.kicker{
+  font-family:var(--mono);font-weight:400;text-shadow:0 2px 14px rgba(10,7,4,.9);
+  font-size:clamp(11px,1.35vw,14px);
+  letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
+  opacity:0;animation:up .9s .15s cubic-bezier(.2,.7,.3,1) forwards;
+}
+.kicker .d{padding-inline:.55em;opacity:.5}
+
+.hero-inner h1{
+  font-family:var(--sans);font-weight:900;margin:.22em 0 0;text-shadow:0 3px 30px rgba(10,7,4,.85),0 1px 6px rgba(10,7,4,.7);
+  font-size:clamp(56px,10.6vw,138px);line-height:.94;
+  letter-spacing:.015em;color:var(--paper);
+  opacity:0;animation:up 1s .28s cubic-bezier(.2,.7,.3,1) forwards;
+}
+.outline{
+  font-family:var(--sans);font-weight:900;
+  font-size:clamp(36px,7.2vw,98px);line-height:1.06;
+  letter-spacing:.005em;margin-top:.02em;
+  color:transparent;-webkit-text-stroke:1.4px var(--gold);
+  opacity:0;animation:up 1s .42s cubic-bezier(.2,.7,.3,1) forwards;
+}
+.titles{
+  display:flex;flex-wrap:wrap;align-items:center;gap:.62em;text-shadow:0 2px 20px rgba(10,7,4,.9);
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(21px,3.5vw,40px);letter-spacing:.1em;
+  margin-top:1.05em;color:var(--paper);
+  opacity:0;animation:up .95s .56s cubic-bezier(.2,.7,.3,1) forwards;
+}
+.titles i{display:inline-block;width:1px;height:1.05em;background:var(--gold-lo);flex:0 0 auto}
+.intro{
+  max-width:720px;margin:1.5em 0 0;text-shadow:0 2px 16px rgba(10,7,4,.95);
+  font-size:clamp(17px,2.05vw,24px);line-height:1.95;
+  color:#D5CCBC;letter-spacing:.035em;
+  opacity:0;animation:up .95s .68s cubic-bezier(.2,.7,.3,1) forwards;
+}
+.acts{
+  display:flex;flex-wrap:wrap;gap:clamp(9px,1.3vw,15px);margin-top:2.35em;
+  opacity:0;animation:up .95s .8s cubic-bezier(.2,.7,.3,1) forwards;
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:.95em 1.95em;border-radius:999px;white-space:nowrap;
+  font-family:var(--sans);font-weight:400;
+  font-size:clamp(13.5px,1.5vw,16.5px);letter-spacing:.13em;
+  text-decoration:none;color:var(--paper);
+  border:1px solid rgba(201,169,97,.4);
+  background:rgba(28,22,15,.5);backdrop-filter:blur(7px);
+  transition:background .35s ease,border-color .35s ease,color .35s ease,transform .35s ease;
+}
+.btn:hover{border-color:var(--gold);background:rgba(201,169,97,.13);transform:translateY(-2px)}
+.btn.gold{background:var(--gold);color:#191106;border-color:var(--gold);font-weight:500}
+.btn.gold:hover{background:#E0C583;border-color:#E0C583}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+.scrollcue{
+  position:absolute;bottom:3.2vh;right:var(--gut);z-index:4;
+  font-family:var(--mono);font-size:9px;
+  letter-spacing:.3em;color:var(--gold-lo);text-transform:uppercase;
+  display:grid;justify-items:center;gap:10px;
+}
+.scrollcue span::after{
+  content:"";display:block;width:1px;height:32px;margin:0 auto;
+  background:linear-gradient(var(--gold-lo),transparent);
+  animation:cue 2.6s ease-in-out infinite;
+}
+@keyframes cue{0%,100%{opacity:.3;transform:scaleY(.55);transform-origin:top}50%{opacity:1;transform:scaleY(1)}}
+
+@media(max-width:760px){
+  .outline{-webkit-text-stroke-width:1px}
+  .reel{grid-template-rows:repeat(3,1fr)}
+  .scrollcue{display:none}
+  .btn{padding:.9em 1.5em}
+}
+
+/* ============ 下標條 CHYRON · 全站簽名元素 ============ */
+.room{padding-block:var(--room);position:relative}
+.chyron{display:flex;gap:clamp(14px,2.4vw,26px);align-items:stretch;margin-bottom:clamp(34px,5vw,58px)}
+.chyron-bar{
+  flex:0 0 2px;background:var(--gold);align-self:stretch;
+  transform:scaleY(0);transform-origin:top;
+  transition:transform .62s cubic-bezier(.2,.7,.3,1);
+}
+.is-in .chyron-bar{transform:scaleY(1)}
+.chyron-txt{
+  opacity:0;transform:translateY(14px);
+  transition:opacity .7s .22s ease,transform .7s .22s cubic-bezier(.2,.7,.3,1);
+}
+.is-in .chyron-txt{opacity:1;transform:none}
+.eyebrow{
+  font-family:var(--mono);font-weight:400;
+  font-size:clamp(11px,1.3vw,13.5px);
+  letter-spacing:.24em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:1.15em;
+}
+.eyebrow .sep{color:var(--gold-lo);padding-inline:.55em}
+.chyron h2{
+  font-family:var(--serif);font-weight:700;margin:0;
+  font-size:clamp(28px,5.2vw,52px);line-height:1.24;
+  letter-spacing:.075em;
+}
+.chyron .h2-en{
+  font-family:var(--didone);font-weight:400;
+  font-size:clamp(12.5px,1.6vw,17px);letter-spacing:.28em;
+  color:var(--muted);margin-top:1.15em;
+}
+
+/* ============ 展品框 FRAME ============ */
+.plate{
+  border:1px solid var(--frame);padding:clamp(8px,1.1vw,14px);
+  background:var(--wall);
+  box-shadow:0 18px 48px rgba(0,0,0,.55);
+  opacity:0;transform:translateY(26px);
+  transition:opacity .85s ease,transform .85s cubic-bezier(.2,.7,.3,1);
+}
+.is-in .plate{opacity:1;transform:none}
+.plate img{width:100%;height:auto;object-fit:cover;filter:brightness(.97)}
+.r32 .plate img,.r34 .plate img,.r169 .plate img{height:100%}
+.plate:hover img{filter:brightness(1.06)}
+.plate img{transition:filter .5s ease}
+.plate.shot img{object-position:top}
+
+.grid{display:grid;gap:clamp(12px,1.9vw,24px)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.r32 .plate{aspect-ratio:3/2}
+.r34 .plate{aspect-ratio:3/4}
+.r169 .plate{aspect-ratio:16/9}
+
+/* 交錯延遲 */
+.grid .plate:nth-child(2){transition-delay:.07s}
+.grid .plate:nth-child(3){transition-delay:.14s}
+.grid .plate:nth-child(4){transition-delay:.21s}
+.grid .plate:nth-child(5){transition-delay:.28s}
+.grid .plate:nth-child(6){transition-delay:.35s}
+
+/* ============ 內文 ============ */
+.body-txt{
+  opacity:0;transform:translateY(18px);
+  transition:opacity .8s .1s ease,transform .8s .1s cubic-bezier(.2,.7,.3,1);
+}
+.is-in .body-txt{opacity:1;transform:none}
+.body-txt p{margin:0 0 1.5em;font-size:clamp(15.5px,1.75vw,19px);color:#DBD3C5}
+.body-txt p:last-child{margin-bottom:0}
+.lede p{font-size:clamp(18px,2.35vw,25px);line-height:2;color:var(--paper)}
+.quiet{color:var(--muted)}
+
+.caption{
+  font-family:var(--mono);font-size:clamp(11.5px,1.35vw,14px);
+  letter-spacing:.16em;color:var(--muted);
+  margin-top:1.1em;text-align:center;
+}
+.meta{
+  display:flex;flex-wrap:wrap;gap:.55em 1.8em;
+  font-family:var(--mono);font-size:clamp(13px,1.55vw,16.5px);
+  letter-spacing:.1em;color:#C0B6A5;line-height:1.9;
+  padding-top:1.5em;margin-top:1.9em;border-top:1px solid var(--frame);
+}
+.meta b{color:var(--gold);font-weight:400;margin-right:.7em}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+
+/* ============ 驚異傳奇 · 目錄美學 ============ */
+.eplist{list-style:none;margin:2.4em 0 0;padding:0;counter-reset:ep}
+.eplist li{
+  counter-increment:ep;padding:1.05em 0;
+  border-bottom:1px solid rgba(59,46,31,.6);
+  display:grid;grid-template-columns:auto 1fr;gap:1.4em;align-items:baseline;
+  opacity:0;transform:translateY(12px);
+  transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1);
+}
+.is-in .eplist li{opacity:1;transform:none}
+.eplist li::before{
+  content:counter(ep,decimal-leading-zero);
+  font-family:var(--mono);font-size:clamp(12px,1.35vw,14px);letter-spacing:.1em;
+  color:var(--gold-lo);
+}
+.eplist .t{font-family:var(--serif);font-weight:600;font-size:clamp(19px,2.4vw,26px);letter-spacing:.08em}
+.eplist .d{display:block;font-size:clamp(12.5px,1.35vw,14px);color:var(--muted);margin-top:.5em;letter-spacing:.03em}
+
+/* ============ 節目表 SCHEDULE ============ */
+.sched{margin-top:1em}
+.station{
+  padding:clamp(20px,3vw,30px) 0;
+  border-top:1px solid var(--frame);
+  display:grid;grid-template-columns:minmax(150px,240px) 1fr;
+  gap:clamp(14px,3vw,48px);align-items:start;
+  opacity:0;transform:translateY(14px);
+  transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1);
+}
+.is-in .station{opacity:1;transform:none}
+.station:last-child{border-bottom:1px solid var(--frame)}
+.station-n{font-family:var(--serif);font-weight:600;font-size:clamp(17.5px,2.15vw,23px);letter-spacing:.12em;color:var(--gold)}
+.station-r{font-family:var(--mono);font-size:clamp(11.5px,1.3vw,13.5px);letter-spacing:.2em;color:var(--muted);margin-top:.85em;text-transform:uppercase}
+.shows{margin:0;padding:0;list-style:none}
+.shows li{padding:.5em 0;font-size:clamp(15.5px,1.75vw,19px);display:flex;flex-wrap:wrap;gap:.2em .9em;align-items:baseline}
+.shows .host{font-size:clamp(13.5px,1.45vw,16px);color:var(--muted);letter-spacing:.04em}
+
+/* ============ FOOTER ============ */
+.end{padding-block:clamp(80px,12vh,140px) clamp(40px,6vh,64px);border-top:1px solid var(--frame);text-align:center;background:var(--ink)}
+.end h3{font-family:var(--serif);font-weight:700;font-size:clamp(34px,5.4vw,56px);letter-spacing:.2em;text-indent:.2em;margin:0}
+.end .latin{font-family:var(--didone);font-size:clamp(14px,1.8vw,19px);letter-spacing:.35em;color:var(--gold);margin-top:1.3em}
+.end .co{font-family:var(--serif);font-weight:600;font-size:clamp(17px,2vw,22px);letter-spacing:.16em;color:var(--paper);margin-top:2.6em}
+.end .lines{font-family:var(--mono);font-size:clamp(14px,1.65vw,17.5px);letter-spacing:.08em;color:#C0B6A5;margin-top:1.5em;line-height:2.5}
+.end a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-lo);padding-bottom:2px}
+.end a:hover{color:var(--paper);border-color:var(--paper)}
+.copy{font-family:var(--mono);font-size:clamp(10.5px,1.2vw,12.5px);letter-spacing:.18em;color:#6B6050;margin-top:4.5em}
+
+.card-contact{
+  font-family:var(--mono);font-size:clamp(10px,1.2vw,12px);
+  letter-spacing:.14em;color:var(--muted);margin-top:2.8em;
+}
+.card-contact a{color:var(--muted);text-decoration:none;border-bottom:1px solid rgba(126,104,56,.5);padding-bottom:2px}
+.card-contact a:hover{color:var(--gold);border-color:var(--gold)}
+.card-contact .dot{padding-inline:.7em;color:var(--gold-lo)}
+
+.caps{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--frame);
+  border:1px solid var(--frame);
+  margin-top:clamp(8px,1vw,16px);
+}
+.cap{
+  background:var(--ink);padding:clamp(24px,3vw,38px) clamp(20px,2.4vw,32px);
+  transition:background .45s ease;
+}
+.cap:hover{background:var(--wall)}
+.cap-n{
+  font-family:var(--mono);font-size:clamp(11.5px,1.3vw,13.5px);letter-spacing:.22em;
+  color:var(--gold-lo);margin-bottom:1.5em;
+}
+.cap h3{
+  font-family:var(--sans);font-weight:700;margin:0 0 .85em;
+  font-size:clamp(19px,2.2vw,25px);letter-spacing:.08em;color:var(--gold);
+}
+.cap p{
+  margin:0;font-size:clamp(15px,1.7vw,18px);
+  line-height:1.95;color:#CCC2B1;letter-spacing:.03em;
+}
+@media(max-width:880px){.caps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.caps{grid-template-columns:1fr}}
+
+.hr{height:1px;background:var(--frame);border:0;margin:0}
+.tag-live{
+  display:inline-block;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.24em;color:var(--ink);background:var(--gold);
+  padding:.42em .95em;text-transform:uppercase;margin-bottom:1.5em;
+}
+
+/* ============ RWD ============ */
+@media(max-width:860px){
+  .cols{grid-template-columns:1fr}
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .station{grid-template-columns:1fr;gap:12px}
+}
+@media(max-width:520px){
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .r34 .plate{aspect-ratio:3/4}
+  .g4.r34{grid-template-columns:repeat(2,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .plate,.body-txt,.chyron-txt,.station,.eplist li{opacity:1!important;transform:none!important}
+  .chyron-bar{transform:scaleY(1)!important}
+}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="hero">
+  <div class="reel" aria-hidden="true">
+    <div class="strip st1"><div class="run" data-imgs="30,13,24,18,32,8,25"></div></div>
+    <div class="strip st2"><div class="run" data-imgs="31,12,19,9,26,15,20"></div></div>
+    <div class="strip st3"><div class="run" data-imgs="33,27,16,21,11,28,22"></div></div>
+  </div>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="kicker">Film<span class="d">·</span>Television<span class="d">·</span>Entertainment</div>
+    <h1>連書賢</h1>
+    <div class="outline" data-t="Jasper Lien">Jasper Lien</div>
+    <div class="titles">電影製片人<i></i>節目製作人<i></i>導演</div>
+    <p class="intro">從綜藝、戲劇、旅遊節目、公益影像到電影製作，長期投入影視內容企劃、拍攝執行與影像敘事。以節目製作人的市場判斷，結合導演的現場調度與故事觀點，讓內容成為可被看見、記住、傳播的作品。</p>
+    <div class="acts">
+      <a class="btn gold" href="mailto:p90huha@gmail.com">洽談合作</a>
+      <a class="btn" href="tel:+886932189254">0932-189254</a>
+      <a class="btn" href="#works">瀏覽作品</a>
+    </div>
+  </div>
+  <div class="scrollcue"><span>Scroll</span></div>
+</header>
+
+<!-- ══════════ 能做什麼 ══════════ -->
+<section class="room reveal">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">Practice</div>
+        <h2>領域</h2>
+      </div>
+    </div>
+
+    <div class="caps body-txt">
+      <div class="cap">
+        <div class="cap-n">01</div>
+        <h3>影像製作</h3>
+        <p>電影、戲劇、綜藝、紀錄片、廣告、品牌形象片。企劃、拍攝、後期全程執行。</p>
+      </div>
+      <div class="cap">
+        <div class="cap-n">02</div>
+        <h3>IP 發想與開發</h3>
+        <p>把一個念頭養成品牌。命名、定位、內容體系與商業模式，同步建構。</p>
+      </div>
+      <div class="cap">
+        <div class="cap-n">03</div>
+        <h3>活動企劃與執行</h3>
+        <p>大型活動、記者會、賽事、演唱會。從提案到現場落地。</p>
+      </div>
+      <div class="cap">
+        <div class="cap-n">04</div>
+        <h3>藝人合作與統籌</h3>
+        <p>經紀、通告、跨界媒合。把對的人，放到對的位置。</p>
+      </div>
+      <div class="cap">
+        <div class="cap-n">05</div>
+        <h3>App 開發製作</h3>
+        <p>從產品規劃到上架。導入 AI 工具，壓低開發門檻與成本。</p>
+      </div>
+      <div class="cap">
+        <div class="cap-n">06</div>
+        <h3>AI 音樂與內容生產</h3>
+        <p>AI 音樂、AI 影像、內容量產。新工具進場，第一時間導入。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TRYLINE ══════════ -->
+<section class="room reveal" id="works">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="tag-live">現在進行中</div>
+        <div class="eyebrow">天合國際娛樂出品<span class="sep">/</span>2026<span class="sep">/</span>製作人</div>
+        <h2>TRYLINE 得分線</h2>
+        <div class="h2-en">TAIWAN RUGBY CONTENT PLATFORM</div>
+      </div>
+    </div>
+    <div class="cols" style="align-items:center;margin-bottom:clamp(30px,4.5vw,56px)">
+      <div class="plate" style="border:0;background:none;box-shadow:none;padding:0;max-width:230px">
+        <img data-n="1" src="images/img1.webp" width="560" height="545" alt="TRYLINE 得分線 標誌" loading="lazy" style="object-fit:contain">
+      </div>
+      <div class="body-txt">
+        <p style="font-family:var(--serif);font-weight:600;font-size:clamp(17px,2.3vw,23px);letter-spacing:.09em;line-height:1.75;color:var(--gold)">每一支球隊，<br>都有一個值得被看到的故事</p>
+        <p style="margin-top:1.6em">台灣橄欖球優質內容平台。用紀錄片的視角，走進教練、球員與家長的真實故事。</p>
+      </div>
+    </div>
+    <div class="plate shot r169"><img data-n="2" src="images/img2.webp" width="914" height="747" alt="TRYLINE 得分線 官方網站" loading="lazy"></div>
+    <div class="plate shot r169" style="margin-top:clamp(12px,1.9vw,24px)"><img data-n="3" src="images/img3.webp" width="925" height="816" alt="TRYLINE 球隊列傳" loading="lazy"></div>
+    <div class="grid g3 r32" style="margin-top:clamp(12px,1.9vw,24px)">
+      <div class="plate shot"><img data-n="4" src="images/img4.webp" width="1207" height="723" alt="TRYLINE 內容" loading="lazy"></div>
+      <div class="plate shot"><img data-n="5" src="images/img5.webp" width="817" height="559" alt="TRYLINE 內容" loading="lazy"></div>
+      <div class="plate shot"><img data-n="7" src="images/img7.webp" width="553" height="648" alt="TRYLINE 內容" loading="lazy"></div>
+    </div>
+    <div class="plate shot" style="margin-top:clamp(12px,1.9vw,24px)"><img data-n="6" src="images/img6.webp" width="571" height="215" alt="TRYLINE 內容" loading="lazy"></div>
+    <div class="body-txt" style="margin-top:clamp(30px,4.5vw,52px)">
+      <div class="meta">
+        <div><b>球隊列傳</b>7 間國中・3 間高中・2 間大學・3 個社會團體</div>
+      </div>
+      <div class="meta" style="border-top:0;padding-top:.6em;margin-top:.2em">
+        <div><b>頻道</b><a href="https://www.youtube.com/@Tryline_TW" target="_blank" rel="noopener" style="color:var(--paper);text-decoration:none;border-bottom:1px solid var(--gold-lo)">youtube.com/@Tryline_TW</a></div>
+        <div><b>官網</b><a href="https://tryline.tw" target="_blank" rel="noopener" style="color:var(--paper);text-decoration:none;border-bottom:1px solid var(--gold-lo)">tryline.tw</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══════════ 電影 ══════════ -->
+<section class="room reveal">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">院線電影<span class="sep">/</span>2025<span class="sep">/</span>聯合製片人</div>
+        <h2>突破：三千米的泳氣</h2>
+        <div class="h2-en">BREAKING THROUGH</div>
+      </div>
+    </div>
+    <div class="plate r169"><img data-n="12" src="images/img12.webp" width="713" height="326" alt="《突破：三千米的泳氣》日月潭萬人泳渡" loading="lazy"></div>
+    <div class="cols" style="margin-top:clamp(30px,4.5vw,56px)">
+      <div class="body-txt">
+        <p>故事發生在日月潭。每年這裡都會舉辦萬人泳渡，持續至今已經四十餘年。</p>
+        <p>這部電影描寫七位盲人朋友，如何一起完成泳渡三千三百公尺的事。</p>
+      </div>
+      <div class="body-txt">
+        <div class="meta" style="border-top:0;padding-top:0;margin-top:0;display:block">
+          <div style="margin-bottom:1em"><b>主演</b>范逸臣・李紫嫣</div>
+          <div><b>特別演出</b>李㼈・米可白</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid g4 r34" style="margin-top:clamp(30px,4.5vw,52px)">
+      <div class="plate"><img data-n="8" src="images/img8.webp" width="239" height="358" alt="范逸臣" loading="lazy"></div>
+      <div class="plate"><img data-n="9" src="images/img9.webp" width="221" height="312" alt="李紫嫣" loading="lazy"></div>
+      <div class="plate"><img data-n="10" src="images/img10.webp" width="222" height="308" alt="李㼈" loading="lazy"></div>
+      <div class="plate"><img data-n="11" src="images/img11.webp" width="225" height="312" alt="米可白" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 上班這黨事 ══════════ -->
+<section class="room reveal">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">TVBS 歡樂台<span class="sep">/</span>製作人</div>
+        <h2>上班這黨事</h2>
+        <div class="h2-en">WORK TIME</div>
+      </div>
+    </div>
+    <div class="plate r169"><img data-n="13" src="images/img13.webp" width="768" height="432" alt="上班這黨事" loading="lazy"></div>
+    <div class="grid g4 r32" style="margin-top:clamp(12px,1.9vw,24px)">
+      <div class="plate"><img data-n="14" src="images/img14.webp" width="440" height="262" alt="上班這黨事 節目畫面" loading="lazy"></div>
+      <div class="plate"><img data-n="15" src="images/img15.webp" width="393" height="263" alt="上班這黨事 節目畫面" loading="lazy"></div>
+      <div class="plate"><img data-n="16" src="images/img16.webp" width="550" height="375" alt="上班這黨事 節目畫面" loading="lazy"></div>
+      <div class="plate"><img data-n="17" src="images/img17.webp" width="340" height="290" alt="上班這黨事 節目畫面" loading="lazy"></div>
+    </div>
+    <div class="body-txt narrow" style="margin-top:clamp(30px,4.5vw,52px)">
+      <p>最受上班族喜愛的談話綜藝節目，屢創收視佳績，也為電視台帶來高節目收益。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 生活接力棒 ══════════ -->
+<section class="room reveal">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">東森超視 × 海峽衛視<span class="sep">/</span>2010<span class="sep">/</span>製作人・編導</div>
+        <h2>生活接力棒</h2>
+        <div class="h2-en">LIFE RELAY</div>
+      </div>
+    </div>
+    <div class="grid g3 r32">
+      <div class="plate"><img data-n="18" src="images/img18.webp" width="464" height="313" alt="生活接力棒" loading="lazy"></div>
+      <div class="plate"><img data-n="19" src="images/img19.webp" width="458" height="309" alt="生活接力棒" loading="lazy"></div>
+      <div class="plate"><img data-n="20" src="images/img20.webp" width="458" height="309" alt="生活接力棒" loading="lazy"></div>
+      <div class="plate"><img data-n="21" src="images/img21.webp" width="458" height="309" alt="生活接力棒" loading="lazy"></div>
+      <div class="plate"><img data-n="22" src="images/img22.webp" width="464" height="313" alt="生活接力棒" loading="lazy"></div>
+      <div class="plate"><img data-n="23" src="images/img23.webp" width="464" height="313" alt="生活接力棒" loading="lazy"></div>
+    </div>
+    <div class="body-txt narrow" style="margin-top:clamp(30px,4.5vw,52px)">
+      <p>結合兩岸三地旅遊資源製作的旅遊綜藝節目。2010 年起每週一至週五於海峽衛視及超視兩岸同步播出，總製作時期長達三年。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ 成都新津 ══════════ -->
+<section class="room reveal">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">城市形象廣告片<span class="sep">/</span>導演</div>
+        <h2>成都・新津</h2>
+        <div class="h2-en">XINJIN, CHENGDU</div>
+      </div>
+    </div>
+    <div class="plate r169"><img data-n="24" src="images/img24.webp" width="440" height="297" alt="成都新津城市形象廣告片" loading="lazy"></div>
+    <div class="grid g3 r32" style="margin-top:clamp(12px,1.9vw,24px)">
+      <div class="plate"><img data-n="25" src="images/img25.webp" width="440" height="297" alt="成都新津" loading="lazy"></div>
+      <div class="plate"><img data-n="26" src="images/img26.webp" width="440" height="297" alt="成都新津" loading="lazy"></div>
+      <div class="plate"><img data-n="27" src="images/img27.webp" width="440" height="297" alt="成都新津" loading="lazy"></div>
+      <div class="plate"><img data-n="28" src="images/img28.webp" width="433" height="292" alt="成都新津" loading="lazy"></div>
+      <div class="plate"><img data-n="29" src="images/img29.webp" width="440" height="297" alt="成都新津" loading="lazy"></div>
+      
+    </div>
+    <div class="body-txt narrow" style="margin-top:clamp(30px,4.5vw,52px)">
+      <p>為宣傳新津的城市形象所拍攝的系列廣告短片。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 黑糖瑪奇朵 ══════════ -->
+<section class="room reveal">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">衛視中文台 × 民視<span class="sep">/</span>2007<span class="sep">/</span>製作人・導演</div>
+        <h2>黑糖瑪奇朵</h2>
+        <div class="h2-en">SUGAR SUGAR RUNE</div>
+      </div>
+    </div>
+    <div class="grid g2 r32">
+      <div class="plate"><img data-n="30" src="images/img30.webp" width="800" height="600" alt="黑糖瑪奇朵 棒棒堂男生組" loading="lazy"></div>
+      <div class="plate"><img data-n="31" src="images/img31.webp" width="800" height="600" alt="黑糖瑪奇朵 黑澀會美眉" loading="lazy"></div>
+    </div>
+    <div class="cols" style="margin-top:clamp(30px,4.5vw,56px)">
+      <div class="body-txt">
+        <p>衛視中文台年度青春偶像劇。Channel V 棒棒堂男生組與黑澀會美眉首次合作的校園劇，也是國內兩大主流電視台共同合資製作的年度大戲。</p>
+      </div>
+      <div class="body-txt">
+        <p style="font-family:var(--serif);font-weight:600;font-size:clamp(17px,2.3vw,23px);letter-spacing:.1em;line-height:1.7;color:var(--gold)">上映即拿下<br>全國收視冠軍</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ 驚異傳奇 ══════════ -->
+<section class="room reveal">
+  <div class="wrap narrow">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">衛視中文台<span class="sep">/</span>2006<span class="sep">/</span>製作人</div>
+        <h2>驚異傳奇</h2>
+        <div class="h2-en">BEYOND BELIEF</div>
+      </div>
+    </div>
+    <div class="body-txt">
+      <p>HD 拍攝的奇幻、懸疑、驚悚單元劇，杜德偉串場主持。台灣版的《陰陽魔界》與《世界奇妙物語》。</p>
+    </div>
+    <ol class="eplist">
+      <li><span><span class="t">意外的訪客</span></span></li>
+      <li><span><span class="t">命運懷錶</span></span></li>
+      <li><span><span class="t">魔幻識別證</span></span></li>
+      <li><span><span class="t">作家的筆</span></span></li>
+      <li><span><span class="t">雙胞胎</span></span></li>
+      <li><span><span class="t">人皮面具</span></span></li>
+      <li><span><span class="t">靈異相機</span></span></li>
+      <li><span><span class="t">寫真手札</span></span></li>
+      <li><span><span class="t">惡魔的肖像</span></span></li>
+      <li><span><span class="t">過去式男人</span></span></li>
+      <li><span><span class="t">許願火柴</span></span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ 罕病 ══════════ -->
+<section class="room reveal">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">公益宣導短片<span class="sep">/</span>2010–2012<span class="sep">/</span>製作</div>
+        <h2>罕見疾病基金會</h2>
+        <div class="h2-en">TAIWAN FOUNDATION FOR RARE DISORDERS</div>
+      </div>
+    </div>
+    <div class="grid g2 r32">
+      <div class="plate"><img data-n="32" src="images/img32.webp" width="720" height="486" alt="罕見疾病基金會公益短片" loading="lazy"></div>
+      <div class="plate"><img data-n="33" src="images/img33.webp" width="720" height="486" alt="罕見疾病基金會公益短片" loading="lazy"></div>
+    </div>
+    <div class="body-txt narrow" style="margin-top:clamp(30px,4.5vw,52px)">
+      <p>以戲劇方式呈現的公益宣導短片，連續三年為罕見疾病基金會製作。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 廣告 ══════════ -->
+<section class="room reveal">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">品牌廣告<span class="sep">/</span>導演</div>
+        <h2>廣告作品</h2>
+        <div class="h2-en">COMMERCIAL WORKS</div>
+      </div>
+    </div>
+    <div class="body-txt narrow" style="margin-bottom:clamp(30px,4.5vw,50px)">
+      <p>執導數十支品牌廣告。</p>
+      <p class="quiet">柯達・福特汽車・Honda・MAZDA・舒潔・白蘭・全家便利商店・遠東百貨・小人國・風潮唱片・易利信・波卡・貼利康・道地烏龍茶・CAS・詩芙儂・誼光・及第</p>
+    </div>
+    <div class="grid g3">
+      <div class="plate"><img data-n="34" src="images/img34.webp" width="565" height="403" alt="廣告作品" loading="lazy"></div>
+      <div class="plate"><img data-n="35" src="images/img35.webp" width="571" height="584" alt="廣告作品" loading="lazy"></div>
+      <div class="plate"><img data-n="36" src="images/img36.webp" width="567" height="581" alt="廣告作品" loading="lazy"></div>
+    </div>
+    <div class="plate" style="margin-top:clamp(12px,1.9vw,24px)"><img data-n="37" src="images/img37.webp" width="564" height="184" alt="廣告作品" loading="lazy"></div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══════════ 節目表 ══════════ -->
+<section class="room reveal">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">Complete Filmography</div>
+        <h2>節目表</h2>
+        <div class="h2-en">THIRTY YEARS ON AIR</div>
+      </div>
+    </div>
+    <div class="sched" id="sched"></div>
+  </div>
+</section>
+
+<!-- ══════════ 幕後 ══════════ -->
+<section class="room reveal">
+  <div class="wrap narrow">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">Behind the Scenes</div>
+        <h2>幕後</h2>
+      </div>
+    </div>
+    <div class="plate"><img data-n="38" src="images/img38.webp" width="548" height="313" alt="幕後工作照" loading="lazy"></div>
+    <div class="caption">走過的人，與時刻</div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="end">
+  <div class="wrap">
+    <h3>連書賢</h3>
+    <div class="latin">JASPER LIEN</div>
+    <div class="co">天合國際娛樂有限公司<br><span style="font-family:var(--didone);font-size:.8em;letter-spacing:.2em;color:var(--muted)">StarSeeker Global Entertainment</span></div>
+    <div class="lines">
+      台北市內湖區成功路四段 337 號 1 樓<br>
+      <a href="tel:+886932189254">0932-189254</a><br>
+      <a href="tel:+886227907360">02-2790-7360</a><br>
+      <a href="mailto:p90huha@gmail.com">p90huha@gmail.com</a><br>
+      <a href="https://starseeker.online/" target="_blank" rel="noopener">starseeker.online</a>
+    </div>
+    <div class="copy">© 2026 JASPER LIEN</div>
+  </div>
+</footer>
+
+<script>
+/* ---- 作品牆：引用既有圖片，避免重複載入 ---- */
+document.querySelectorAll('.run').forEach(run=>{
+  const list=(run.dataset.imgs||'').split(',').filter(Boolean);
+  const frag=document.createDocumentFragment();
+  list.forEach(n=>{
+    const src=document.querySelector('img[data-n="'+n.trim()+'"]');
+    if(!src)return;
+    const im=document.createElement('img');
+    im.src=src.getAttribute('src'); im.alt='';
+    im.width=600; im.height=400; im.decoding='async';
+    frag.appendChild(im);
+  });
+  run.appendChild(frag);
+  run.innerHTML=run.innerHTML+run.innerHTML;   // 複製一份達成無縫循環
+});
+
+/* ---- 節目表 ---- */
+const sched=[
+ {n:"衛視中文台",r:"製作人・編導",s:[["驚異傳奇","戲劇單元劇・杜德偉串場"],["黑糖瑪奇朵","青春偶像劇"]]},
+ {n:"TVBS",r:"製作人",s:[["上班這黨事","談話綜藝"]]},
+ {n:"東森超視 × 海峽衛視",r:"製作人・編導",s:[["生活接力棒","兩岸旅遊綜藝"]]},
+ {n:"東森綜合台",r:"後製編導",s:[["爆笑一籮筐",""],["辛普森家庭","中文潤稿"]]},
+ {n:"緯來電視台",r:"製作人・編導",s:[["整人潑辣王（國外版）","阿嬌・聶雲 主持"],["哇咧靚廣告","小嫻・曹啟泰 主持"],["電玩快打","小嫻・艾力克斯 主持"],["電玩 high 客","施文彬・簡沛恩 主持"]]},
+ {n:"中天電視台",r:"製作人",s:[["社會記者的故事",""],["樂透三人行","白雲・和家馨・九孔 主持"]]},
+ {n:"三立電視台",r:"導演",s:[["城市事件簿",""],["戲說台灣",""]]},
+ {n:"八大電視台",r:"導演",s:[["鬼屋傳奇",""],["查某人的故事",""]]},
+ {n:"台視",r:"執行製作人",s:[["寶島大卡拉","胡瓜・邰智源 主持"]]},
+ {n:"華視",r:"策劃・編導",s:[["美麗心世界","高怡平・曾國城 主持"],["梅之戀",""],["台灣清潔隊",""]]},
+ {n:"JET 日本台",r:"製作人",s:[["瘋狂特報王","葛西見二 主持"]]},
+ {n:"客家電視台",r:"編導",s:[["hot hot 後生客","郎祖筠 主持"]]},
+ {n:"太陽衛視",r:"編導",s:[["假日何處去","許佳蓉 主持"]]}
+];
+const se=document.getElementById('sched');
+if(se){se.innerHTML=sched.map(c=>`<div class="station"><div><div class="station-n">${c.n}</div><div class="station-r">${c.r}</div></div><ul class="shows">${c.s.map(x=>`<li><span>${x[0]}</span>${x[1]?`<span class="host">${x[1]}</span>`:''}</li>`).join('')}</ul></div>`).join('');}
+
+/* ---- 進場觀察 ---- */
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});
+},{threshold:0,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+function sweep(){document.querySelectorAll('.reveal:not(.is-in)').forEach(el=>{
+  if(el.getBoundingClientRect().top < window.innerHeight - 40) el.classList.add('is-in');});}
+addEventListener('scroll',sweep,{passive:true});addEventListener('resize',sweep);setTimeout(sweep,800);
+</script>
+</body>
+</html>
