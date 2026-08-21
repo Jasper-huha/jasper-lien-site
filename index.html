@@ -219,7 +219,7 @@ a{color:inherit}
 }
 .is-in .plate{opacity:1;transform:none}
 .plate img{width:100%;height:auto;object-fit:cover;filter:brightness(.97)}
-.r32 .plate img,.r34 .plate img,.r169 .plate img{height:100%}
+.r32 .plate img,.r34 .plate img,.r43 .plate img,.r169 .plate img{height:100%}
 .plate:hover img{filter:brightness(1.06)}
 .plate img{transition:filter .5s ease}
 .plate.shot img{object-position:top}
@@ -230,6 +230,7 @@ a{color:inherit}
 .g4{grid-template-columns:repeat(4,1fr)}
 .r32 .plate{aspect-ratio:3/2}
 .r34 .plate{aspect-ratio:3/4}
+.r43 .plate{aspect-ratio:4/3}
 .r169 .plate{aspect-ratio:16/9}
 
 /* 交錯延遲 */
@@ -399,6 +400,33 @@ a{color:inherit}
   </div>
   <div class="scrollcue"><span>Scroll</span></div>
 </header>
+
+<!-- ══════════ 扶輪 ══════════ -->
+<section class="room reveal" id="rotary">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">國際扶輪 3481 地區<span class="sep">/</span>第五分區</div>
+        <h2>台北卓越扶輪社</h2>
+        <div class="h2-en">SERVICE ABOVE SELF</div>
+      </div>
+    </div>
+
+    <div class="body-txt" style="margin-bottom:clamp(28px,4.2vw,48px)">
+      <p style="font-family:var(--serif);font-weight:600;font-size:clamp(20px,2.7vw,28px);letter-spacing:.14em;line-height:1.7;color:var(--gold);margin:0">聯誼主委</p>
+    </div>
+
+    <div class="grid g4 r43">
+      <div class="plate"><img src="images/rotary1.webp" width="880" height="660" alt="國際扶輪 3481 地區 扶輪社活動" loading="lazy"></div>
+      <div class="plate"><img src="images/rotary2.webp" width="880" height="660" alt="連書賢｜台北卓越扶輪社 聯誼主委" loading="lazy"></div>
+      <div class="plate"><img src="images/rotary3.webp" width="880" height="660" alt="扶輪社聯誼活動" loading="lazy"></div>
+      <div class="plate"><img src="images/rotary4.webp" width="660" height="880" alt="扶輪社例會" loading="lazy" style="object-position:center 25%"></div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
 
 <!-- ══════════ 能做什麼 ══════════ -->
 <section class="room reveal">
