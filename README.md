@@ -51,6 +51,7 @@ zbpack.json     Zeabur 靜態站設定
 | 聯絡信箱 / 電話 | `p90huha@gmail.com` |
 | 開場那段 | `30 年，13 家電視台` |
 | 規格表 | `class="spec"` |
+| 扶輪社身分（HERO 下方） | `id="rotary"` |
 | 節目表（電視台清單） | `const sched=[` |
 | Hero 背景滾動的節目名 | `const titles=[` |
 
