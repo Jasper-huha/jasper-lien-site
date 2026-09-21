@@ -48,13 +48,12 @@ zbpack.json     Zeabur 靜態站設定
 
 | 想改什麼 | 找什麼關鍵字 |
 |---|---|
-| 聯絡信箱 / 電話 | `p90huha@gmail.com` |
-| 開場那段 | `30 年，13 家電視台` |
-| 規格表 | `class="spec"` |
+| 開場那段介紹 | `class="intro"` |
+| Hero 背景滾動的圖 | `data-imgs=`（數字對應作品圖的 `data-n`） |
 | HERO 下方的人像照 | `id="portrait"` |
 | 扶輪社身分（HERO 下方） | `id="rotary"` |
-| 節目表（電視台清單） | `const sched=[` |
-| Hero 背景滾動的節目名 | `const titles=[` |
+| 聯絡按鈕：電話／LINE／Email（領域下方） | `class="contact"` |
+| 頁尾聯絡資料 | `class="lines"` |
 
 換圖：把新圖放進 `images/`，改 `index.html` 裡對應的 `src="images/imgXX.webp"`。
 

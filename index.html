@@ -138,10 +138,9 @@ a{color:inherit}
   color:#D5CCBC;letter-spacing:.035em;
   opacity:0;animation:up .95s .68s cubic-bezier(.2,.7,.3,1) forwards;
 }
-.acts{
-  display:flex;flex-wrap:wrap;gap:clamp(9px,1.3vw,15px);margin-top:2.35em;
-  opacity:0;animation:up .95s .8s cubic-bezier(.2,.7,.3,1) forwards;
-}
+/* 聯絡按鈕（領域下方） */
+.contact{margin-top:clamp(40px,5.5vw,64px)}
+.contact-btns{display:flex;flex-wrap:wrap;gap:clamp(9px,1.3vw,15px)}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
   padding:.95em 1.95em;border-radius:999px;white-space:nowrap;
@@ -284,24 +283,6 @@ a{color:inherit}
 .eplist .t{font-family:var(--serif);font-weight:600;font-size:clamp(19px,2.4vw,26px);letter-spacing:.08em}
 .eplist .d{display:block;font-size:clamp(12.5px,1.35vw,14px);color:var(--muted);margin-top:.5em;letter-spacing:.03em}
 
-/* ============ 節目表 SCHEDULE ============ */
-.sched{margin-top:1em}
-.station{
-  padding:clamp(20px,3vw,30px) 0;
-  border-top:1px solid var(--frame);
-  display:grid;grid-template-columns:minmax(150px,240px) 1fr;
-  gap:clamp(14px,3vw,48px);align-items:start;
-  opacity:0;transform:translateY(14px);
-  transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1);
-}
-.is-in .station{opacity:1;transform:none}
-.station:last-child{border-bottom:1px solid var(--frame)}
-.station-n{font-family:var(--serif);font-weight:600;font-size:clamp(17.5px,2.15vw,23px);letter-spacing:.12em;color:var(--gold)}
-.station-r{font-family:var(--mono);font-size:clamp(11.5px,1.3vw,13.5px);letter-spacing:.2em;color:var(--muted);margin-top:.85em;text-transform:uppercase}
-.shows{margin:0;padding:0;list-style:none}
-.shows li{padding:.5em 0;font-size:clamp(15.5px,1.75vw,19px);display:flex;flex-wrap:wrap;gap:.2em .9em;align-items:baseline}
-.shows .host{font-size:clamp(13.5px,1.45vw,16px);color:var(--muted);letter-spacing:.04em}
-
 /* ============ FOOTER ============ */
 .end{padding-block:clamp(80px,12vh,140px) clamp(40px,6vh,64px);border-top:1px solid var(--frame);text-align:center;background:var(--ink)}
 .end h3{font-family:var(--serif);font-weight:700;font-size:clamp(34px,5.4vw,56px);letter-spacing:.2em;text-indent:.2em;margin:0}
@@ -310,6 +291,7 @@ a{color:inherit}
 .end .lines{font-family:var(--mono);font-size:clamp(14px,1.65vw,17.5px);letter-spacing:.08em;color:#C0B6A5;margin-top:1.5em;line-height:2.5}
 .end a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-lo);padding-bottom:2px}
 .end a:hover{color:var(--paper);border-color:var(--paper)}
+.end .dot{padding-inline:.7em;color:var(--gold-lo)}
 .copy{font-family:var(--mono);font-size:clamp(10.5px,1.2vw,12.5px);letter-spacing:.18em;color:#6B6050;margin-top:4.5em}
 
 .card-contact{
@@ -357,7 +339,6 @@ a{color:inherit}
 @media(max-width:860px){
   .cols{grid-template-columns:1fr}
   .g3,.g4{grid-template-columns:repeat(2,1fr)}
-  .station{grid-template-columns:1fr;gap:12px}
 }
 @media(max-width:520px){
   .g2,.g3,.g4{grid-template-columns:1fr}
@@ -367,7 +348,8 @@ a{color:inherit}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .plate,.body-txt,.chyron-txt,.station,.eplist li{opacity:1!important;transform:none!important}
+  .plate,.body-txt,.chyron-txt,.eplist li{opacity:1!important;transform:none!important}
+  .kicker,.hero-inner h1,.outline,.titles,.intro{opacity:1!important;transform:none!important}
   .chyron-bar{transform:scaleY(1)!important}
 }
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
@@ -392,11 +374,6 @@ a{color:inherit}
     <div class="outline" data-t="Jasper Lien">Jasper Lien</div>
     <div class="titles">電影製片人<i></i>節目製作人<i></i>導演</div>
     <p class="intro">從綜藝、戲劇、旅遊節目、公益影像到電影製作，長期投入影視內容企劃、拍攝執行與影像敘事。以節目製作人的市場判斷，結合導演的現場調度與故事觀點，讓內容成為可被看見、記住、傳播的作品。</p>
-    <div class="acts">
-      <a class="btn gold" href="mailto:p90huha@gmail.com">洽談合作</a>
-      <a class="btn" href="tel:+886932189254">0932-189254</a>
-      <a class="btn" href="#works">瀏覽作品</a>
-    </div>
   </div>
   <div class="scrollcue"><span>Scroll</span></div>
 </header>
@@ -478,6 +455,15 @@ a{color:inherit}
         <div class="cap-n">06</div>
         <h3>AI 音樂與內容生產</h3>
         <p>AI 音樂、AI 影像、內容量產。新工具進場，第一時間導入。</p>
+      </div>
+    </div>
+
+    <div class="contact body-txt">
+      <div class="eyebrow">Contact<span class="sep">/</span>聯絡方式</div>
+      <div class="contact-btns">
+        <a class="btn gold" href="tel:+886932189254">0932-189254</a>
+        <a class="btn" href="https://line.me/ti/p/_ntqeufsO0" target="_blank" rel="noopener">加 LINE</a>
+        <a class="btn" href="mailto:p90huha@gmail.com">Email</a>
       </div>
     </div>
   </div>
@@ -739,21 +725,6 @@ a{color:inherit}
 
 <hr class="hr">
 
-<!-- ══════════ 節目表 ══════════ -->
-<section class="room reveal">
-  <div class="wrap">
-    <div class="chyron">
-      <div class="chyron-bar"></div>
-      <div class="chyron-txt">
-        <div class="eyebrow">Complete Filmography</div>
-        <h2>節目表</h2>
-        <div class="h2-en">THIRTY YEARS ON AIR</div>
-      </div>
-    </div>
-    <div class="sched" id="sched"></div>
-  </div>
-</section>
-
 <!-- ══════════ 幕後 ══════════ -->
 <section class="room reveal">
   <div class="wrap narrow">
@@ -777,7 +748,7 @@ a{color:inherit}
     <div class="co">天合國際娛樂有限公司<br><span style="font-family:var(--didone);font-size:.8em;letter-spacing:.2em;color:var(--muted)">StarSeeker Global Entertainment</span></div>
     <div class="lines">
       台北市內湖區成功路四段 337 號 1 樓<br>
-      <a href="tel:+886932189254">0932-189254</a><br>
+      <a href="tel:+886932189254">0932-189254</a><span class="dot">·</span><a href="https://line.me/ti/p/_ntqeufsO0" target="_blank" rel="noopener">加 LINE</a><br>
       <a href="tel:+886227907360">02-2790-7360</a><br>
       <a href="mailto:p90huha@gmail.com">p90huha@gmail.com</a><br>
       <a href="https://starseeker.online/" target="_blank" rel="noopener">starseeker.online</a>
@@ -802,25 +773,6 @@ document.querySelectorAll('.run').forEach(run=>{
   run.appendChild(frag);
   run.innerHTML=run.innerHTML+run.innerHTML;   // 複製一份達成無縫循環
 });
-
-/* ---- 節目表 ---- */
-const sched=[
- {n:"衛視中文台",r:"製作人・編導",s:[["驚異傳奇","戲劇單元劇・杜德偉串場"],["黑糖瑪奇朵","青春偶像劇"]]},
- {n:"TVBS",r:"製作人",s:[["上班這黨事","談話綜藝"]]},
- {n:"東森超視 × 海峽衛視",r:"製作人・編導",s:[["生活接力棒","兩岸旅遊綜藝"]]},
- {n:"東森綜合台",r:"後製編導",s:[["爆笑一籮筐",""],["辛普森家庭","中文潤稿"]]},
- {n:"緯來電視台",r:"製作人・編導",s:[["整人潑辣王（國外版）","阿嬌・聶雲 主持"],["哇咧靚廣告","小嫻・曹啟泰 主持"],["電玩快打","小嫻・艾力克斯 主持"],["電玩 high 客","施文彬・簡沛恩 主持"]]},
- {n:"中天電視台",r:"製作人",s:[["社會記者的故事",""],["樂透三人行","白雲・和家馨・九孔 主持"]]},
- {n:"三立電視台",r:"導演",s:[["城市事件簿",""],["戲說台灣",""]]},
- {n:"八大電視台",r:"導演",s:[["鬼屋傳奇",""],["查某人的故事",""]]},
- {n:"台視",r:"執行製作人",s:[["寶島大卡拉","胡瓜・邰智源 主持"]]},
- {n:"華視",r:"策劃・編導",s:[["美麗心世界","高怡平・曾國城 主持"],["梅之戀",""],["台灣清潔隊",""]]},
- {n:"JET 日本台",r:"製作人",s:[["瘋狂特報王","葛西見二 主持"]]},
- {n:"客家電視台",r:"編導",s:[["hot hot 後生客","郎祖筠 主持"]]},
- {n:"太陽衛視",r:"編導",s:[["假日何處去","許佳蓉 主持"]]}
-];
-const se=document.getElementById('sched');
-if(se){se.innerHTML=sched.map(c=>`<div class="station"><div><div class="station-n">${c.n}</div><div class="station-r">${c.r}</div></div><ul class="shows">${c.s.map(x=>`<li><span>${x[0]}</span>${x[1]?`<span class="host">${x[1]}</span>`:''}</li>`).join('')}</ul></div>`).join('');}
 
 /* ---- 進場觀察 ---- */
 const io=new IntersectionObserver((es)=>{
