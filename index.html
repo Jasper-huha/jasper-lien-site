@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>連書賢 Jasper Lien｜電影製片人・節目製作人・導演</title>
-<meta name="description" content="連書賢，近三十年影視製作資歷。作品橫跨院線電影、偶像劇、戲劇單元劇、棚內綜藝、外景行腳、品牌廣告與公益短片。2025 年院線電影《突破：三千米的泳氣》聯合製片人。">
+<title>連書賢 Jasper Lien｜天合國際娛樂 創辦人・原香居 創辦人</title>
+<meta name="description" content="連書賢，天合國際娛樂創辦人、原香居創辦人。電影製片人・節目製作人・導演，近三十年影視製作，從綜藝、戲劇、旅遊節目到院線電影。">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="連書賢 Jasper Lien｜電影製片人・節目製作人・導演">
-<meta property="og:description" content="近三十年影視製作資歷。作品橫跨院線電影、偶像劇、綜藝節目、品牌廣告與公益短片。">
+<meta property="og:title" content="連書賢 Jasper Lien｜天合國際娛樂 創辦人・原香居 創辦人">
+<meta property="og:description" content="天合國際娛樂 創辦人｜原香居 創辦人。電影製片人・節目製作人・導演，近三十年影視製作。">
 <meta property="og:locale" content="zh_TW">
 <meta name="theme-color" content="#16110C">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -138,6 +138,36 @@ a{color:inherit}
   color:#D5CCBC;letter-spacing:.035em;
   opacity:0;animation:up .95s .68s cubic-bezier(.2,.7,.3,1) forwards;
 }
+.subtitles{
+  font-family:var(--sans);font-weight:400;text-shadow:0 2px 16px rgba(10,7,4,.9);
+  font-size:clamp(14px,1.8vw,20px);letter-spacing:.22em;color:#CFC5B4;margin-top:1.15em;
+  opacity:0;animation:up .95s .62s cubic-bezier(.2,.7,.3,1) forwards;
+}
+.biz{
+  list-style:none;margin:1.3em 0 0;padding:0;max-width:760px;
+  opacity:0;animation:up .95s .8s cubic-bezier(.2,.7,.3,1) forwards;
+}
+.biz li{
+  display:grid;grid-template-columns:auto 1fr;column-gap:1.2em;align-items:baseline;
+  padding:.8em 0;border-top:1px solid rgba(201,169,97,.28);
+  font-size:clamp(15px,1.8vw,19px);line-height:1.85;color:#D5CCBC;
+  text-shadow:0 2px 16px rgba(10,7,4,.95);
+}
+.biz li:last-child{border-bottom:1px solid rgba(201,169,97,.28)}
+.biz b{font-family:var(--serif);font-weight:700;color:var(--gold);letter-spacing:.1em;white-space:nowrap}
+.biz a{
+  grid-column:2;justify-self:start;margin-top:.2em;
+  font-family:var(--mono);font-size:.8em;letter-spacing:.1em;
+  color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-lo);
+}
+.biz a:hover{color:var(--paper);border-color:var(--paper)}
+@media(max-width:560px){
+  .titles{flex-direction:column;align-items:flex-start;gap:.15em}
+  .titles i{display:none}
+  .biz li{grid-template-columns:1fr}
+  .biz a{grid-column:1}
+}
+
 /* 聯絡按鈕（領域下方） */
 .contact{margin-top:clamp(40px,5.5vw,64px)}
 .contact-btns{display:flex;flex-wrap:wrap;gap:clamp(9px,1.3vw,15px)}
@@ -292,6 +322,7 @@ a{color:inherit}
 .end a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-lo);padding-bottom:2px}
 .end a:hover{color:var(--paper);border-color:var(--paper)}
 .end .dot{padding-inline:.7em;color:var(--gold-lo)}
+.end .co + .co{margin-top:1.3em}
 .copy{font-family:var(--mono);font-size:clamp(10.5px,1.2vw,12.5px);letter-spacing:.18em;color:#6B6050;margin-top:4.5em}
 
 .card-contact{
@@ -328,6 +359,26 @@ a{color:inherit}
 @media(max-width:880px){.caps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.caps{grid-template-columns:1fr}}
 
+/* ============ 事業體系 ============ */
+.ventures{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,26px)}
+.venture{
+  display:flex;flex-direction:column;align-items:flex-start;
+  border:1px solid var(--frame);background:var(--wall);
+  padding:clamp(26px,3.4vw,44px);
+}
+.v-mark{width:88px;height:88px;border-radius:50%;flex:0 0 auto;margin-bottom:1.6em}
+.v-text{
+  display:grid;place-items:center;border:1px solid var(--gold-lo);
+  font-family:var(--serif);font-weight:700;font-size:26px;letter-spacing:.08em;text-indent:.08em;color:var(--gold);
+}
+.v-name{font-family:var(--serif);font-weight:700;font-size:clamp(22px,2.6vw,30px);letter-spacing:.08em;line-height:1.4}
+.v-en{font-family:var(--didone);font-size:clamp(12px,1.35vw,14.5px);letter-spacing:.22em;color:var(--muted);margin-top:.45em;text-transform:uppercase}
+.v-role{font-family:var(--mono);font-size:clamp(12px,1.35vw,14px);letter-spacing:.16em;color:var(--gold);margin-top:1.4em}
+.venture .v-slogan{font-family:var(--serif);font-weight:600;font-size:clamp(16px,1.9vw,20px);letter-spacing:.1em;line-height:1.7;color:var(--paper);margin:1.1em 0 0}
+.venture .v-desc{font-size:clamp(14.5px,1.6vw,17px);line-height:1.95;color:#CCC2B1;margin:.8em 0 0}
+.v-go{margin-top:auto;padding-top:1.8em}
+@media(max-width:760px){.ventures{grid-template-columns:1fr}}
+
 .hr{height:1px;background:var(--frame);border:0;margin:0}
 .tag-live{
   display:inline-block;font-family:var(--mono);font-size:9.5px;
@@ -349,7 +400,7 @@ a{color:inherit}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .plate,.body-txt,.chyron-txt,.eplist li{opacity:1!important;transform:none!important}
-  .kicker,.hero-inner h1,.outline,.titles,.intro{opacity:1!important;transform:none!important}
+  .kicker,.hero-inner h1,.outline,.titles,.subtitles,.intro,.biz{opacity:1!important;transform:none!important}
   .chyron-bar{transform:scaleY(1)!important}
 }
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
@@ -369,11 +420,16 @@ a{color:inherit}
   <div class="grain" aria-hidden="true"></div>
 
   <div class="hero-inner">
-    <div class="kicker">Film<span class="d">·</span>Television<span class="d">·</span>Entertainment</div>
+    <div class="kicker">Founder<span class="d">·</span>Producer<span class="d">·</span>Director</div>
     <h1>連書賢</h1>
     <div class="outline" data-t="Jasper Lien">Jasper Lien</div>
-    <div class="titles">電影製片人<i></i>節目製作人<i></i>導演</div>
-    <p class="intro">從綜藝、戲劇、旅遊節目、公益影像到電影製作，長期投入影視內容企劃、拍攝執行與影像敘事。以節目製作人的市場判斷，結合導演的現場調度與故事觀點，讓內容成為可被看見、記住、傳播的作品。</p>
+    <div class="titles"><span>天合國際娛樂 創辦人</span><i></i><span>原香居 創辦人</span></div>
+    <div class="subtitles">電影製片人・節目製作人・導演</div>
+    <p class="intro">近三十年影視製作，從綜藝、戲劇、旅遊節目到院線電影。<br>目前擁有兩個事業體系：</p>
+    <ul class="biz">
+      <li><b>天合國際娛樂</b><span>做影視內容、藝人經紀與大型活動</span><a href="https://starseeker.online/" target="_blank" rel="noopener">starseeker.online ↗</a></li>
+      <li><b>原香居</b><span>自有品牌滴雞精、鱸魚精、養生藥膳、中式餐點，實體店面經營</span><a href="https://yuanhsiangchu.com/" target="_blank" rel="noopener">yuanhsiangchu.com ↗</a></li>
+    </ul>
   </div>
   <div class="scrollcue"><span>Scroll</span></div>
 </header>
@@ -383,6 +439,40 @@ a{color:inherit}
   <div class="wrap">
     <div class="plate" style="max-width:420px;margin-inline:auto">
       <img src="images/portrait.webp" width="840" height="1120" alt="連書賢 Jasper Lien" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 事業體系 ══════════ -->
+<section class="room reveal" id="ventures">
+  <div class="wrap">
+    <div class="chyron">
+      <div class="chyron-bar"></div>
+      <div class="chyron-txt">
+        <div class="eyebrow">Ventures</div>
+        <h2>事業體系</h2>
+      </div>
+    </div>
+
+    <div class="ventures body-txt">
+      <article class="venture">
+        <div class="v-mark v-text" aria-hidden="true">天合</div>
+        <div class="v-name">天合國際娛樂有限公司</div>
+        <div class="v-en">StarSeeker Global Entertainment</div>
+        <div class="v-role">創辦人・執行長／總導演</div>
+        <p class="v-slogan">發掘新星・創造感動・放眼世界</p>
+        <p class="v-desc">立足台灣、放眼世界的綜合型娛樂公司。電影與電視製作、藝人經紀、國際合作與品牌策劃、新媒體與 OTT 原創內容、音樂製作、大型活動承攬。</p>
+        <div class="v-go"><a class="btn" href="https://starseeker.online/" target="_blank" rel="noopener">starseeker.online</a></div>
+      </article>
+      <article class="venture">
+        <img class="v-mark" src="images/yhc-mark.webp" width="176" height="176" alt="原香居" loading="lazy">
+        <div class="v-name">原香居</div>
+        <div class="v-en">Yuan Hsiang Chu</div>
+        <div class="v-role">創辦人</div>
+        <p class="v-slogan">給家人喝的那一碗真原味</p>
+        <p class="v-desc">當天現宰溫體放山雞，14 小時慢工滴煉，不加一滴水。原料要看得見，製程要說得清。<br>內湖門市｜台北市內湖區成功路四段 337 號 1 樓</p>
+        <div class="v-go"><a class="btn" href="https://yuanhsiangchu.com/" target="_blank" rel="noopener">yuanhsiangchu.com</a></div>
+      </article>
     </div>
   </div>
 </section>
@@ -746,12 +836,13 @@ a{color:inherit}
     <h3>連書賢</h3>
     <div class="latin">JASPER LIEN</div>
     <div class="co">天合國際娛樂有限公司<br><span style="font-family:var(--didone);font-size:.8em;letter-spacing:.2em;color:var(--muted)">StarSeeker Global Entertainment</span></div>
+    <div class="co">原香居<br><span style="font-family:var(--didone);font-size:.8em;letter-spacing:.2em;color:var(--muted)">Yuan Hsiang Chu</span></div>
     <div class="lines">
       台北市內湖區成功路四段 337 號 1 樓<br>
       <a href="tel:+886932189254">0932-189254</a><span class="dot">·</span><a href="https://line.me/ti/p/_ntqeufsO0" target="_blank" rel="noopener">加 LINE</a><br>
       <a href="tel:+886227907360">02-2790-7360</a><br>
       <a href="mailto:p90huha@gmail.com">p90huha@gmail.com</a><br>
-      <a href="https://starseeker.online/" target="_blank" rel="noopener">starseeker.online</a>
+      <a href="https://starseeker.online/" target="_blank" rel="noopener">starseeker.online</a><span class="dot">·</span><a href="https://yuanhsiangchu.com/" target="_blank" rel="noopener">yuanhsiangchu.com</a>
     </div>
     <div class="copy">© 2026 JASPER LIEN</div>
   </div>

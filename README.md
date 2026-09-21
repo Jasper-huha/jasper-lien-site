@@ -50,7 +50,9 @@ zbpack.json     Zeabur 靜態站設定
 |---|---|
 | 開場那段介紹 | `class="intro"` |
 | Hero 背景滾動的圖 | `data-imgs=`（數字對應作品圖的 `data-n`） |
+| 首頁兩個事業體系那兩行 | `class="biz"` |
 | HERO 下方的人像照 | `id="portrait"` |
+| 事業體系卡片（天合／原香居） | `id="ventures"` |
 | 扶輪社身分（HERO 下方） | `id="rotary"` |
 | 聯絡按鈕：電話／LINE／Email（領域下方） | `class="contact"` |
 | 頁尾聯絡資料 | `class="lines"` |
