@@ -54,7 +54,7 @@ zbpack.json     Zeabur 靜態站設定
 | HERO 下方的人像照 | `id="portrait"` |
 | 事業體系卡片（天合／原香居） | `id="ventures"` |
 | 扶輪社身分（HERO 下方） | `id="rotary"` |
-| 聯絡按鈕：電話／LINE／Email（領域下方） | `class="contact"` |
+| 聯絡方式：電話／LINE／Email（首頁下方、領域下方共兩組，改的時候兩組都要改） | `Contact<span` |
 | 頁尾聯絡資料 | `class="lines"` |
 
 換圖：把新圖放進 `images/`，改 `index.html` 裡對應的 `src="images/imgXX.webp"`。
